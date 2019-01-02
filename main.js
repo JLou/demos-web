@@ -8,6 +8,8 @@
 //   easing: "linear"
 // });
 (function() {
+  let anime = require('./anime.min.js');
+
   var path = anime.path("#motionPath path");
 
   //   var motionPath = anime({
@@ -34,28 +36,28 @@
     loop: true
   });
 
-  var txt = new TextFx(document.body.querySelector(".title"));
+  let charming = require("./charming.min.js");
+  charming(document.body.querySelector(".title"), {classPrefix: 'letter'});
 
-  //   let last;
-  //   let f = txt.show("fx17", () => last());
-  //   for (let index = 4; index > 0; index--) {
-  //     let fnplus1 = f;
-  //     f = () => {
-  //       document.body
-  //         .querySelectorAll(".letter-effect span")
-  //         .forEach(el => (el.style.opacity = "0"));
-  //       txt.show("fx" + index, fnplus1);
-  //     };
-  //     last = f;
-  //   }
-  let ef = txt.effects.fx4;
-  ef.in.duration = 1000;
-  ef.in.delay = function(el, index) {
-    return 400 + 100 + index * 150;
-  };
-  ef.in.loop = true;
-  ef.in.direction = "alternate";
-  txt.show(ef);
+    let anim = anime({
+      targets: ".title span",
+      easing: "easeInOutSine",
+      duration: 1000,
+      direction: "alternate",
+      delay: function(el, index) {
+        return 400 + 100 + index * 150;
+      },
+      direction: "alternate",
+      loop: true,
+      translateY: function(el, index) {
+        return index%2 === 0 ? ['-80%', '0%'] : ['80%', '0%'];
+      },
+      rotateZ: [90,0],
+      rotate: function(el, index) {
+        let val = index*7+6+"deg";
+        return [val, val];
+      },
+      opacity:1
+    });
 
-  //   f();
 })();

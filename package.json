@@ -1,0 +1,14 @@
+{
+  "name": "demos-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/JLou/demos-web.git",
+  "author": "JLou <jlou.xd@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^1.11.0"
+  },
+  "devDependencies": {
+    "sass": "^1.15.2"
+  }
+}

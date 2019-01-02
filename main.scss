@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background: white;
+
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+svg {
+  margin: auto;
+  width: 300px;
+  display:block;
+}
+
+.letter-effect {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.letter-effect > span {
+  // opacity: 0;
+  padding: 7px;
+}
+
+.letter1,
+.letter7,
+.letter13 {
+  color: #5ebd3e;
+}
+
+.letter2,
+.letter8 {
+  color: #ffb900;
+}
+
+.letter3,
+.letter9 {
+  color: #f78200;
+}
+
+.letter4,
+.letter10 {
+  color: #e23838;
+}
+.letter5,
+.letter11 {
+  color: #973999;
+}
+.letter6,
+.letter12 {
+  color: #009cdf;
+}
+
+h1 {
+  position: relative;
+  display: block;
+  width: 588px;
+  margin: auto;
+  height: 250px;
+}
+
+ .badge {
+  position: relative;
+  width: 200px;
+  transform: rotate(-50deg);
+  margin:auto;
+}
+h1 span {
+  height: 200px;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  top: 0;
+  transform-origin: bottom center;
+  opacity: 0;
+
+}
+ @for $i from 1 through 30 {
+  .letter#{$i} { transform: rotate($i*7+6deg)}
+}

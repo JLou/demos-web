@@ -8,6 +8,9 @@
  * Copyright 2016, Codrops
  * http://www.codrops.com
  */
+
+ let anime = require('./anime.min.js');  let charming = require("./charming.min.js");
+
 ;(function(window) {
 
 	'use strict';
