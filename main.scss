@@ -1,8 +1,12 @@
 body {
   margin: 0;
-  background: white;
+  background: url("./img/pattern.png");
 
   padding: 30px;
+}
+
+.container {
+  background:radial-gradient(closest-side, white 50%, transparent);
 }
 
 h1 {
