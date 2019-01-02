@@ -8,7 +8,12 @@
   "dependencies": {
     "parcel": "^1.11.0"
   },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
+  },
   "devDependencies": {
+    "parcel-bundler": "^1.11.0",
     "sass": "^1.15.2"
   }
 }
