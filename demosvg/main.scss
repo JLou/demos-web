@@ -1,0 +1,28 @@
+body {
+    margin:auto;
+    text-align: center;
+    width:500px;
+    background:#333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font: 80px "Helvetica", serif ;
+}
+
+#line-mask{
+    stroke-dasharray: 500;
+    animation: path 2s linear both;
+}
+
+@keyframes  path {
+    0% {
+        stroke-dashoffset: 500;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
