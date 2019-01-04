@@ -1,12 +1,13 @@
+@import "normalize.css";
+
 body {
   margin: 0;
   background: url("./img/pattern.png");
-
-  padding: 30px;
 }
 
 .container {
-  background:radial-gradient(closest-side, white 50%, transparent);
+  background: radial-gradient(closest-side, white 50%, transparent);
+  padding: 30px;
 }
 
 h1 {
@@ -15,7 +16,7 @@ h1 {
 svg {
   margin: auto;
   width: 300px;
-  display:block;
+  display: block;
 }
 
 .letter-effect {
@@ -76,11 +77,11 @@ h1 {
   height: 250px;
 }
 
- .badge {
+.badge {
   position: relative;
   width: 200px;
   transform: rotate(-50deg);
-  margin:auto;
+  margin: auto;
 }
 h1 span {
   height: 200px;
@@ -90,8 +91,48 @@ h1 span {
   top: 0;
   transform-origin: bottom center;
   opacity: 0;
-
 }
- @for $i from 1 through 30 {
-  .letter#{$i} { transform: rotate($i*7+6deg)}
+@for $i from 1 through 30 {
+  .letter#{$i} {
+    transform: rotate($i * 7+6deg);
+  }
+}
+
+@keyframes shift-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#links {
+  color: rgb(255, 115, 0);
+  font-size: 2rem;
+  background: white;
+  margin: 0;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 20px;
+  width: 100wh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 200% 200%;
+    text-decoration: underline;
+    // background: linear-gradient(to right, green, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shift-background 1s both infinite;
+  }
 }

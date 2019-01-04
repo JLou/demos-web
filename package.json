@@ -6,6 +6,7 @@
   "author": "JLou <jlou.xd@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "parcel": "^1.11.0"
   },
   "scripts": {
